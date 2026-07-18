@@ -1,0 +1,165 @@
+.navbar {
+  background-color: #212428;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar.sticky-nav {
+  position: fixed;
+  backdrop-filter: blur(15px) !important;
+  background-color: rgb(24 27 32 / 83%);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  animation: slideDown 0.5s ease-in-out forwards;
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.logo a {
+  color: #ffffff;
+  justify-self: start;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  gap: 40px;
+}
+
+
+.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.3s ease-out;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  display: inline-block;
+  font-size: 18px;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ff4a57;
+  transition: width 0.3s ease-in-out;
+  box-shadow: 0 0 8px rgba(255, 74, 87, 0.6);
+}
+
+.nav-link:hover {
+  color: #ff4a57;
+  /* transform: translateY(-2px); */
+  text-shadow: 0 0 10px rgba(255, 74, 87, 0.3);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.hamburger {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.hamburger:focus {
+  outline: 2px solid #ff4a57;
+  outline-offset: 4px;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: #ffffff;
+}
+
+/* Hamburger Animation */
+.hamburger.open .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+@media screen and (max-width: 768px) {
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+    background-color: #212428;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .nav-menu.active {
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+
+  .nav-item {
+    margin: 16px 0;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+.navbar-logo {
+  height: 70px;
+  width: auto;
+  display: block;
+}

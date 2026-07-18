@@ -1,0 +1,230 @@
+/* =========================================
+   Hero Section Layout
+   ========================================= */
+.hero-section {
+  background-color: #121416; /* Dark background to make white and #FF014F pop */
+  padding: 130px 0 100px 0;
+  min-height: calc(100vh - 80px); /* Account for navbar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* For animations */
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  gap: 60px;
+}
+
+/* =========================================
+   Left Column: Text Content
+   ========================================= */
+.hero-content {
+  flex: 6;
+  max-width: 100%;
+  /* Entrance animation */
+  animation: slideInLeft 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  opacity: 0;
+  transform: translateX(-50px);
+}
+
+.hero-subheading {
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+  color: #c4cfde;
+}
+
+.hero-heading {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 35px;
+  color: #ffffff;
+}
+
+.hero-name {
+  color: #FF014F;
+}
+
+.hero-typing-line {
+  display: block;
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-top: 5px;
+}
+
+.hero-description {
+  font-size: 1.125rem;
+  color: #878e99;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  max-width: 95%;
+}
+
+.hero-btn-group {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.hero-download-btn {
+  display: inline-block;
+  padding: 15px 35px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(145deg, #FF014F, #cc003f);
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 10px 20px rgba(255, 1, 79, 0.2);
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.hero-download-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 25px rgba(255, 1, 79, 0.4);
+  background: transparent;
+  border: 1px solid #FF014F;
+  color: #FF014F;
+}
+
+/* =========================================
+   Right Column: Image
+   ========================================= */
+.hero-image-wrapper {
+  flex: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /* Entrance animation */
+  animation: slideInRight 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  animation-delay: 0.3s;
+  opacity: 0;
+  transform: translateX(50px);
+}
+
+/* Decorative background circle behind image */
+.hero-image-wrapper::before {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255,1,79,0.15) 0%, rgba(18,20,22,0) 70%);
+  border-radius: 50%;
+  z-index: 0;
+  animation: pulse 4s infinite ease-in-out;
+}
+
+.hero-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+  z-index: 1;
+  position: relative;
+  border: 2px solid rgba(255, 255, 255, 0.05);
+}
+
+.hero-image:hover {
+  transform: translateY(-15px) scale(1.02);
+  box-shadow: 0 30px 60px rgba(255, 1, 79, 0.2);
+  border-color: rgba(255, 1, 79, 0.3);
+}
+
+/* =========================================
+   Animations
+   ========================================= */
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.9);
+    opacity: 0.7;
+  }
+}
+
+/* =========================================
+   Responsive Media Queries
+   ========================================= */
+@media screen and (max-width: 900px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .hero-content {
+    animation: fadeSlideUp 1s ease-out forwards;
+    transform: translateY(30px);
+  }
+
+  .hero-image-wrapper {
+    animation: fadeSlideUp 1s ease-out forwards;
+    animation-delay: 0.2s;
+    transform: translateY(30px);
+  }
+
+  .hero-heading {
+    font-size: 2.5rem;
+  }
+
+  .hero-typing-line {
+    font-size: 2.5rem;
+  }
+
+  .hero-image-wrapper::before {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
