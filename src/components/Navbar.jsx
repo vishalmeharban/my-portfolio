@@ -25,7 +25,7 @@ const Navbar = ({ logoText = "MyLogo", menuItems = ["Home", "About", "Services",
 
   return (
     <nav className={`navbar ${isSticky ? 'sticky-nav' : ''}`}>
-      <div className="nav-container">
+      <div className="container">
         <div className="logo">
           <a href="/">
             <img src={logo} alt="VSH Logo" className="navbar-logo" />

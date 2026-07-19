@@ -13,11 +13,11 @@ const Hero = () => {
   });
   return (
     <header className="hero-section">
-      <div className="hero-container">
+      <div className="container">
         <article className="hero-content">
           <p className="hero-subheading">WELCOME TO MY WORLD</p>
           <h1 className="hero-heading">
-            Hi, I’m <span className="hero-name">Jone Lee</span>
+            Hi, I’m <span className="hero-name">Vishal Meharban</span>
             <br />
             <span className="hero-typing-line">
               a <span>{text}</span>

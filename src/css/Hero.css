@@ -3,7 +3,6 @@
    ========================================= */
 .hero-section {
   background-color: #121416; /* Dark background to make white and #FF014F pop */
-  padding: 130px 0 100px 0;
   min-height: calc(100vh - 80px); /* Account for navbar */
   display: flex;
   align-items: center;
@@ -11,12 +10,11 @@
   overflow: hidden; /* For animations */
 }
 
-.hero-container {
+.hero-section .container {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
   width: 100%;
   gap: 60px;
 }
@@ -186,11 +184,15 @@
 /* =========================================
    Responsive Media Queries
    ========================================= */
-@media screen and (max-width: 900px) {
-  .hero-container {
+@media screen and (max-width: 991px) {
+  .hero-section .container {
     flex-direction: column;
     text-align: center;
     gap: 40px;
+  }
+
+  .hero-btn-group {
+    justify-content: center;
   }
 
   .hero-content {

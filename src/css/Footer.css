@@ -1,0 +1,135 @@
+/* =========================================
+   Footer Section
+   ========================================= */
+.footer-section {
+  background-color: #1a1c20;
+  padding-top: 80px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding-bottom: 60px;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-logo {
+  height: 60px;
+  margin-bottom: 25px;
+}
+
+.footer-about {
+  color: #a0a0a0;
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+
+.footer-title {
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  position: relative;
+  display: inline-block;
+}
+
+.footer-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  height: 2px;
+  width: 50px;
+  background-color: #FF014F;
+}
+
+.footer-contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-contact-list li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #a0a0a0;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.footer-icon {
+  color: #FF014F;
+  font-size: 1.1rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: #a0a0a0;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.footer-links a:hover {
+  color: #FF014F;
+  padding-left: 8px;
+}
+
+/* =========================================
+   Footer Bottom (Copyright)
+   ========================================= */
+.footer-bottom {
+  background-color: #121416;
+  padding: 25px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  text-align: center;
+}
+
+.copyright-text {
+  color: #878e99;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.highlight-text {
+  color: #FF014F;
+  font-weight: 600;
+}
+
+/* =========================================
+   Responsive
+   ========================================= */
+@media screen and (max-width: 768px) {
+  .footer-section {
+    padding-top: 60px;
+  }
+  .footer-content {
+    flex-direction: column;
+    padding-bottom: 40px;
+  }
+  .footer-col {
+    width: 100%;
+  }
+  .footer-logo {
+    height: 50px;
+  }
+}

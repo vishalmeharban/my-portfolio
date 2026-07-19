@@ -11,10 +11,58 @@ html, body {
   background-color: #121416;
 }
 
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
 }
 
 p {
   font-family: 'Poppins', sans-serif;
+}
+
+/* =========================================
+   Global Section Spacing
+   ========================================= */
+.hero-section,
+.skills-section,
+.portfolio-section,
+.contact-section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.hero-section {
+  padding-top: 140px !important;
+}
+
+@media (max-width: 991px) {
+  .hero-section,
+  .skills-section,
+  .portfolio-section,
+  .contact-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .hero-section {
+    padding-top: 120px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section,
+  .skills-section,
+  .portfolio-section,
+  .contact-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .hero-section {
+    padding-top: 100px !important;
+  }
 }

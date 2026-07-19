@@ -2,15 +2,12 @@
    Skills Section
    ========================================= */
 .skills-section {
-  padding: 80px 20px;
   background-color: #121416;
   /* Same dark theme */
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .skills-container {
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .skills-header {

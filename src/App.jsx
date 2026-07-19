@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import Skills from './components/Skills';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 function App() {
   const menuItems = ["Home", "About", "Skills", "Portfolio", "Contact"];
@@ -16,6 +17,7 @@ function App() {
       <Skills />
       <Portfolio />
       <Contact />
+      <Footer />
     </div>
   );
 }
