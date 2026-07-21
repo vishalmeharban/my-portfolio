@@ -51,9 +51,28 @@
 }
 
 .contact-left:hover, .contact-right:hover {
-  transform: translateY(-10px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
   border-color: rgba(255, 1, 79, 0.2);
+}
+
+.contact-left {
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-left .cursor-grid-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  border-radius: 20px;
+  pointer-events: none;
+}
+
+.contact-left .cursor-grid-wrapper .cursor-grid {
+  pointer-events: auto;
 }
 
 /* =========================================
@@ -71,6 +90,9 @@
   overflow: hidden;
   border-radius: 12px;
   margin-bottom: 25px;
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .contact-image-wrapper:hover .contact-image {
@@ -79,6 +101,9 @@
 
 .contact-details {
   margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .contact-details-item {
@@ -93,6 +118,12 @@
 .contact-icon {
   color: #FF014F;
   font-size: 1.5rem;
+}
+
+.contact-social {
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .social-title {
@@ -123,6 +154,7 @@
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.05);
+  pointer-events: auto;
 }
 
 .social-icon-box:hover {
@@ -133,6 +165,26 @@
   box-shadow: 0 10px 20px rgba(255, 1, 79, 0.2);
 }
 
+.contact-right {
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-right .cursor-grid-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  border-radius: 20px;
+  pointer-events: none;
+}
+
+.contact-right .cursor-grid-wrapper .cursor-grid {
+  pointer-events: auto;
+}
+
 /* =========================================
    Right Column (Form)
    ========================================= */
@@ -140,6 +192,9 @@
   display: flex;
   flex-direction: column;
   gap: 25px;
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .form-group {
@@ -175,6 +230,7 @@
   font-size: 1rem;
   transition: all 0.3s ease;
   width: 100%;
+  pointer-events: auto;
 }
 
 .contact-textarea {
@@ -201,6 +257,7 @@
   cursor: pointer;
   transition: all 0.4s ease;
   margin-top: 10px;
+  pointer-events: auto;
 }
 
 .submit-btn:hover {

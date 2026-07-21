@@ -88,7 +88,6 @@
 }
 
 .portfolio-card:hover {
-  transform: translateY(-12px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
   border-color: rgba(255, 1, 79, 0.2);
 }

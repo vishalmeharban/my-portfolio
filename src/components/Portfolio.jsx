@@ -3,6 +3,7 @@ import '../css/Portfolio.css';
 import projectImage from '../assets/project-placeholder.png';
 import netflixImage from '../assets/netflix-clone.png';
 import ecommerceImage from '../assets/ecommerce-thumbnail.png';
+import GlareHover from './GlareHover';
 
 const portfolioData = [
   {
@@ -90,12 +91,20 @@ const Portfolio = () => {
 
         <div className="portfolio-grid">
           {filteredProjects.map((project) => (
-            <a 
-              key={project.id} 
-              href={project.link || '#'} 
-              target={project.link ? "_blank" : "_self"} 
-              rel="noopener noreferrer" 
+            <GlareHover
+              key={project.id}
               className="portfolio-card"
+              href={project.link || '#'}
+              target={project.link ? "_blank" : "_self"}
+              rel="noopener noreferrer"
+              glareColor="#ffffff"
+              glareOpacity={0.2}
+              glareAngle={-30}
+              glareSize={300}
+              transitionDuration={1200}
+              background="linear-gradient(145deg, #1a1c20 0%, #121416 100%)"
+              borderRadius="20px"
+              borderColor="rgba(255, 255, 255, 0.05)"
               style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}
             >
               <div className="portfolio-image-wrapper">
@@ -108,7 +117,7 @@ const Portfolio = () => {
                 <h3 className="portfolio-project-title">{project.title}</h3>
                 <p className="portfolio-description">{project.description}</p>
               </div>
-            </a>
+            </GlareHover>
           ))}
         </div>
       </div>

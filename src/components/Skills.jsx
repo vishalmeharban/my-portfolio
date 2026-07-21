@@ -3,6 +3,7 @@ import '../css/Skills.css';
 import { FaReact, FaHtml5, FaCss3Alt, FaGithub } from 'react-icons/fa';
 import { IoLogoJavascript } from 'react-icons/io5';
 import { SiNextdotjs, SiFirebase } from 'react-icons/si';
+import CursorGrid from './CursorGrid';
 
 const skillsData = [
   { id: 1, name: 'React js', icon: <FaReact />, color: '#61DAFB' },
@@ -26,6 +27,23 @@ const Skills = () => {
         <div className="skills-grid">
           {skillsData.map((skill) => (
             <div key={skill.id} className="skill-card">
+              <div className="cursor-grid-wrapper">
+                <CursorGrid
+                  cellSize={35}
+                  color={skill.color}
+                  radius={100}
+                  falloff="smooth"
+                  holdTime={400}
+                  fadeDuration={800}
+                  lineWidth={1.2}
+                  maxOpacity={1}
+                  fillOpacity={0}
+                  gridOpacity={0}
+                  cellRadius={0}
+                  clickPulse
+                  pulseSpeed={600}
+                />
+              </div>
               <div 
                 className="skill-icon-wrapper"
                 style={{ color: skill.color }}

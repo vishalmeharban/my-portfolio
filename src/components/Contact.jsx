@@ -9,6 +9,7 @@ import {
   FaLinkedinIn,
 } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
+import CursorGrid from "./CursorGrid";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -77,6 +78,23 @@ const Contact = () => {
         <div className="contact-content">
           {/* Left Column */}
           <div className="contact-left">
+            <div className="cursor-grid-wrapper">
+              <CursorGrid
+                cellSize={40}
+                color="#FF014F"
+                radius={120}
+                falloff="smooth"
+                holdTime={400}
+                fadeDuration={800}
+                lineWidth={1.2}
+                maxOpacity={1}
+                fillOpacity={0}
+                gridOpacity={0}
+                cellRadius={0}
+                clickPulse
+                pulseSpeed={600}
+              />
+            </div>
             <div className="contact-image-wrapper">
               <img
                 src={contactImage}
@@ -132,6 +150,23 @@ const Contact = () => {
 
           {/* Right Column */}
           <div className="contact-right">
+            <div className="cursor-grid-wrapper">
+              <CursorGrid
+                cellSize={40}
+                color="#FF014F"
+                radius={120}
+                falloff="smooth"
+                holdTime={400}
+                fadeDuration={800}
+                lineWidth={1.2}
+                maxOpacity={1}
+                fillOpacity={0}
+                gridOpacity={0}
+                cellRadius={0}
+                clickPulse
+                pulseSpeed={600}
+              />
+            </div>
             <form className="contact-form" onSubmit={handleSubmit}>
               <div className="form-row">
                 <div className="form-group">
