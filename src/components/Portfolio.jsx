@@ -1,13 +1,21 @@
 import React, { useState } from 'react';
 import '../css/Portfolio.css';
-import projectImage from '../assets/project-placeholder.png';
 import netflixImage from '../assets/netflix-clone.png';
 import ecommerceImage from '../assets/ecommerce-thumbnail.png';
+import expenseTrackerImage from '../assets/expense-tracker-thumbnail.jpg';
 import GlareHover from './GlareHover';
 
 const portfolioData = [
   {
     id: 0,
+    title: 'Expense Tracker',
+    category: 'Recent Work',
+    image: expenseTrackerImage,
+    description: 'A comprehensive web app for tracking income, expenses, and managing personal finances effortlessly.',
+    link: 'https://expense-tracker-app-jet-delta.vercel.app/'
+  },
+  {
+    id: 1,
     title: 'Netflix Clone',
     category: 'Recent Work',
     image: netflixImage,
@@ -15,47 +23,12 @@ const portfolioData = [
     link: 'https://netflix-clone-efjv77x5k-vishal-meharbans-projects.vercel.app'
   },
   {
-    id: 1,
+    id: 2,
     title: 'E-Commerce Platform',
     category: 'Recent Work',
     image: ecommerceImage,
     description: 'A full-stack e-commerce solution with dynamic routing and payment integration.',
     link: 'https://e-commerce-forever-ufh5.vercel.app/login'
-  },
-  {
-    id: 2,
-    title: 'Social Media App',
-    category: 'All Projects',
-    image: projectImage,
-    description: 'A real-time social networking app with chat and live notifications.'
-  },
-  {
-    id: 3,
-    title: 'SaaS Dashboard',
-    category: 'Recent Work',
-    image: projectImage,
-    description: 'A modern, responsive analytics dashboard for tracking SaaS metrics.'
-  },
-  {
-    id: 4,
-    title: 'Portfolio Website',
-    category: 'All Projects',
-    image: projectImage,
-    description: 'A customizable personal portfolio template for developers and designers.'
-  },
-  {
-    id: 5,
-    title: 'Fitness Tracker',
-    category: 'All Projects',
-    image: projectImage,
-    description: 'A mobile-first progressive web app to track daily workouts and nutrition.'
-  },
-  {
-    id: 6,
-    title: 'Booking System',
-    category: 'All Projects',
-    image: projectImage,
-    description: 'An appointment scheduling system with calendar integration and reminders.'
   }
 ];
 
