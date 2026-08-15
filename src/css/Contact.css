@@ -115,6 +115,17 @@
   font-size: 1.1rem;
 }
 
+.contact-link {
+  color: #a0a0a0;
+  text-decoration: none;
+  pointer-events: auto;
+  transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+  color: #FF014F;
+}
+
 .contact-icon {
   color: #FF014F;
   font-size: 1.5rem;

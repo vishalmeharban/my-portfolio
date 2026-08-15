@@ -4,6 +4,7 @@ import contactImage from "../assets/contact.png";
 import {
   FaPhoneAlt,
   FaEnvelope,
+  FaMapMarkerAlt,
   FaInstagram,
   FaFacebookF,
   FaLinkedinIn,
@@ -106,11 +107,19 @@ const Contact = () => {
             <div className="contact-details">
               <div className="contact-details-item">
                 <FaEnvelope className="contact-icon" />
-                <span>hello@example.com</span>
+                <a href="mailto:vishalmeharban30@gmail.com" className="contact-link">
+                  vishalmeharban30@gmail.com
+                </a>
               </div>
               <div className="contact-details-item">
                 <FaPhoneAlt className="contact-icon" />
-                <span>+1 234 567 890</span>
+                <a href="tel:+919302232221" className="contact-link">
+                  +91 9302232221
+                </a>
+              </div>
+              <div className="contact-details-item">
+                <FaMapMarkerAlt className="contact-icon" />
+                <span>Indore, Madhya Pradesh</span>
               </div>
             </div>
 

@@ -20,15 +20,15 @@ const Footer = () => {
             <ul className="footer-contact-list">
               <li>
                 <FaMapMarkerAlt className="footer-icon" />
-                <span>New Delhi, India</span>
+                <span>Indore, Madhya Pradesh</span>
               </li>
               <li>
                 <FaPhoneAlt className="footer-icon" />
-                <span>+91 98765 43210</span>
+                <a href="tel:+919302232221" style={{ color: 'inherit', textDecoration: 'none' }}>+91 9302232221</a>
               </li>
               <li>
                 <FaEnvelope className="footer-icon" />
-                <span>hello@example.com</span>
+                <a href="mailto:vishalmeharban30@gmail.com" style={{ color: 'inherit', textDecoration: 'none' }}>vishalmeharban30@gmail.com</a>
               </li>
             </ul>
           </div>
